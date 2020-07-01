@@ -1,0 +1,73 @@
+/* https://paletton.com/#uid=13t0u0kllllaFw0g0qFqFg0w0aF */
+body {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+}
+
+#leftbar {
+    width: 20%;
+    min-width: 320px;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1280px) {
+    body {
+        flex-direction: column-reverse;
+        overflow-x: hidden;
+    }
+
+    #leftbar {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #main {
+        width: 100%;
+        flex: 1;
+        box-sizing: border-box;
+    }
+}
+
+#leftbar {
+    background-color: #477187;
+    margin: 0;
+    padding: 0.5ch 2ch 0.5ch 2ch;
+    color: white;
+}
+
+#main {
+    margin: 0;
+    padding: 0.5ch 2ch 0.5ch 2ch;
+}
+
+a,a:hover,a:link {
+  color: inherit;
+}
+
+ul {
+    list-style: none
+}
+
+li {
+    padding: 0.2ch;
+}
+
+.bigul li {
+    padding: 1ch 0.1ch 1ch 0.1ch;
+}
+
+p {
+    padding: 0.5ch 0.1ch 0.1ch 0.5ch;
+    margin: 0.5ch 0.1ch 0.1ch 0.5ch;
+}
+
+@media (prefers-color-scheme: dark) {
+    #main {
+        color: white;
+        background-color: #032436;
+    }
+    #leftbar {
+        background-color: #113B51;
+    }
+}
