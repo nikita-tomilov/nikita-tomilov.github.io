@@ -34,10 +34,10 @@ body {
     }
     #leftbar {
         min-width: 320px;
-        width: 100vw;
+        width: 100%;
     }
     #main {
-        width: 100vw;
+        width: 100%;
     }
 }
 
