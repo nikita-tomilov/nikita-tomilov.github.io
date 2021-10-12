@@ -10,7 +10,7 @@ body {
 #wrapper {
     display: flex;
     flex-direction: row;
-    height: 100%;
+    min-height: 100vh;
 }
 
 #leftbar {
@@ -26,13 +26,18 @@ body {
     flex: 4;
 }
 
-@media screen and (orientation: portrait) and (max-width: 1280px) {
+@media screen and (orientation: portrait) {
     #wrapper {
         flex-direction: column-reverse;
         height: auto;
+        width: 100vw;
     }
     #leftbar {
         min-width: 320px;
+        width: 100vw;
+    }
+    #main {
+        width: 100vw;
     }
 }
 
