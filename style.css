@@ -8,6 +8,7 @@ body {
 
 #leftbar {
     width: 20%;
+    height: 100%;
     min-width: 320px;
 }
 
@@ -36,13 +37,13 @@ body {
 #leftbar {
     background-color: #477187;
     margin: 0;
-    padding: 0.5ch 2ch 0.5ch 2ch;
+    padding: 0 2ch 0 2ch;
     color: white;
 }
 
 #main {
     margin: 0;
-    padding: 0.5ch 2ch 0.5ch 2ch;
+    padding: 0 2ch 0 2ch;
 }
 
 a,a:hover,a:link {
@@ -59,11 +60,6 @@ li {
 
 .bigul li {
     padding: 1ch 0.1ch 1ch 0.1ch;
-}
-
-p {
-    padding: 0.5ch 0.1ch 0.1ch 0.5ch;
-    margin: 0.5ch 0.1ch 0.1ch 0.5ch;
 }
 
 @media (prefers-color-scheme: dark) {
