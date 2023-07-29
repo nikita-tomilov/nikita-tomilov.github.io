@@ -63,7 +63,7 @@ li {
 }
 
 @media (prefers-color-scheme: dark) {
-    #main {
+    body, #main {
         color: white;
         background-color: #032436;
     }
