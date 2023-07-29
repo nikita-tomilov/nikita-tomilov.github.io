@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HDR photos</title>
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+	<script type="text/javascript">
+        function changeImage(id) {
+            var url = document.getElementById(id).src;
+            if (url.endsWith(".avif")) {
+                document.getElementById(id).src = id + ".jpg";
+                document.getElementById(id + "_label").innerHTML = id + " SDR";
+            } else {
+                document.getElementById(id).src = id + ".avif";
+                document.getElementById(id+ "_label").innerHTML = id + " HDR";
+            }
+        }
+
+        function populateImage(id) {
+            var div = document.createElement('div');
+            div.id = 'container';
+            div.className = 'imgbox';
+
+            var label = document.createElement('button');
+            label.id = id + "_label";
+            label.innerHTML = id + " HDR"
+            label.className = 'center-fit';
+            label.onclick = function() { changeImage(id); }
+            div.appendChild(label);
+
+            var img = document.createElement('img');
+            img.id = id;
+            img.className = 'center-fit';
+            img.src = id + ".avif"
+            img.onclick = function() { changeImage(id); }
+            div.appendChild(img);
+
+            document.body.appendChild(div);
+        }
+        function populateImages() {
+            ids = ['DSC_4234', 'DSC_3661', 'DSC_4188', 'DSC_5563', 'DSC_6054', 'DSC_6239', 'DSC_4227', 'DSC_1796', 'DSC_6669'];
+            for (i in ids) {
+                populateImage(ids[i]);
+            }
+        }    
+    </script>
+</head>
+<body onload="populateImages()";>
+</body>
+</html>
