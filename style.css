@@ -223,3 +223,96 @@ address {
     grid-row: 2;
   }
 }
+
+@media print {
+  @page {
+    margin: 1.2cm;
+  }
+
+  :root {
+    color-scheme: light;
+    --main-background: #ffffff;
+    --main-text: #171717;
+    --muted-text: #494949;
+    --main-heading: #111111;
+    --main-link: #222222;
+    --sidebar-background: #ffffff;
+    --sidebar-text: #171717;
+    --sidebar-muted: #494949;
+    --sidebar-rule: #c9cccf;
+    --focus: transparent;
+  }
+
+  html,
+  body {
+    min-width: 0;
+    background: #ffffff;
+  }
+
+  body {
+    font-size: 10.5pt;
+    line-height: 1.45;
+    print-color-adjust: exact;
+  }
+
+  #wrapper {
+    display: block;
+    min-height: 0;
+  }
+
+  #main,
+  #leftbar {
+    display: block;
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+  }
+
+  #main {
+    background: #ffffff;
+    color: #171717;
+  }
+
+  #main > * {
+    max-width: none;
+  }
+
+  #leftbar {
+    margin-top: 1rem;
+    background: #ffffff;
+    color: #171717;
+  }
+
+  #leftbar h2,
+  #leftbar a,
+  .note {
+    color: inherit;
+  }
+
+  .skip-link {
+    display: none !important;
+  }
+
+  .intro {
+    margin-bottom: 1.5rem;
+  }
+
+  section + section,
+  #leftbar section + section {
+    margin-top: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    break-after: avoid;
+  }
+
+  section,
+  .entry-list > li,
+  .project-list > li,
+  .achievement-list > li {
+    break-inside: avoid;
+  }
+}
